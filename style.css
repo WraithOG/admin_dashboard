@@ -1,3 +1,63 @@
 body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
     display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100px 800px;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main-content"
+    ;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: #222831;
+    text-align: center;
+}
+#sidebar-title {
+    color: aliceblue;
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 32px;
+}
+#sidebar-content {
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 50px);
+    grid-template-areas: 
+    "."
+    "."
+    "."
+    "."
+    "home"
+    "profile"
+    "messages"
+    "settings"
+    "support"
+    ;
+}
+
+#home {
+    grid-area: home;
+}
+#profile {
+    grid-area: profile;
+}
+#messages {
+    grid-area: messages;
+}
+#settings {
+    grid-area: settings;
+}
+#support {
+    grid-area: support;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main-content{
+    grid-area: main-content;
 }
